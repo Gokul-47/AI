@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- INSERT: Page Loader Overlay -->
+    <div id="page-loader" class="page-loader active" aria-live="polite" aria-busy="true" aria-hidden="false">
+      <div class="loader-content">
+        <div class="loader-orb">
+          <span class="loader-core"></span>
+        </div>
+        <p class="loader-text">Loading...</p>
+      </div>
+    </div>
+    <!-- END INSERT -->
+
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="index.html" class="brand">
+          <img src="assets/logoimg.webp">
+          <div class="brand-text">
+            <span class="brand-title">Stackly</span>
+            <span class="brand-subtitle">Artificial Intelligence Studio</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item nav-dropdown">
+              <button class="nav-link nav-dropdown-toggle">
+                Home
+                <span class="chevron"></span>
+              </button>
+              <ul class="dropdown-menu">
+               
+                <li><a href="home2.html" class="dropdown-link">Home-2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Industries</a>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Resources</a>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="404.html" class="btn btn-ghost">Sign In</a>
+            <a href="404.html" class="btn btn-primary">Request Demo</a>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Hero Section -->
+      <section class="section hero" id="hero">
+        <div class="hero-inner container">
+          <div class="hero-content">
+            <p class="eyebrow reveal">AI SERVICES FOR THE REAL WORLD</p>
+            <h1 class="hero-title gradient-text reveal">
+              Build, deploy & scale<br />intelligent systems in days.
+            </h1>
+            <p class="hero-subtitle reveal">
+              Stackly orchestrates data, models and automation into one
+              cohesive AI service layer – secure, explainable and ready for
+              production.
+            </p>
+            <div class="hero-actions reveal">
+              <a href="404.html" class="btn btn-primary">
+                Start a pilot
+                <span class="btn-glow"></span>
+              </a>
+              <a href="404.html" class="btn btn-ghost">Talk to an architect</a>
+            </div>
+            <div class="hero-metadata reveal">
+              <div>
+                <span class="meta-label">Average deployment time</span>
+                <span class="meta-value">3.5 weeks</span>
+              </div>
+              <div>
+                <span class="meta-label">Enterprise uptime</span>
+                <span class="meta-value">99.98%</span>
+              </div>
+              <div>
+                <span class="meta-label">Regions</span>
+                <span class="meta-value">11 global zones</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="orbital-system reveal">
+              <div class="orbital-core"></div>
+              <div class="orbit orbit-1">
+                <span class="node node-blue"></span>
+              </div>
+              <div class="orbit orbit-2">
+                <span class="node node-pink"></span>
+              </div>
+              <div class="orbit orbit-3">
+                <span class="node node-cyan"></span>
+              </div>
+              <div class="orbit orbit-4">
+                <span class="node node-gold"></span>
+              </div>
+            </div>
+            <div class="hero-card-grid reveal">
+              <article class="glass-card">
+                <p class="card-label">Real-time inference</p>
+                <p class="card-value">12 ms</p>
+                <p class="card-meta">Median p95 latency</p>
+              </article>
+              <article class="glass-card">
+                <p class="card-label">Cost reduction</p>
+                <p class="card-value">38%</p>
+                <p class="card-meta">Average across clients</p>
+              </article>
+              <article class="glass-card">
+                <p class="card-label">Models managed</p>
+                <p class="card-value">1200+</p>
+                <p class="card-meta">All major frameworks</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="hero-gradient"></div>
+      </section>
+
+      <!-- 2. Trust Logos Section -->
+      <section class="section section-muted logos" id="trust">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">TRUSTED BY TEAMS WHO SHIP AT SCALE</p>
+          </div>
+          <div class="logos-row reveal">
+            <span class="logo-pill">Quantify Labs</span>
+            <span class="logo-pill">NovaStack Cloud</span>
+            <span class="logo-pill">BlueOrbit Finance</span>
+            <span class="logo-pill">Helio Health</span>
+            <span class="logo-pill">Apex Mobility</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Services Grid Section -->
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">SERVICES</p>
+            <h2 class="section-title">End‑to‑end AI service delivery.</h2>
+            <p class="section-subtitle">
+              From discovery to deployment, Stackly wraps modern AI into
+              auditable, production-grade services.
+            </p>
+          </div>
+          <div class="cards-grid services-grid">
+            <article class="service-card reveal">
+              <h3>AI Discovery & Strategy</h3>
+              <p>
+                Map opportunity, feasibility and impact across your
+                organization with our AI architects.
+              </p>
+              <ul>
+                <li>Use‑case discovery sprints</li>
+                <li>Value & risk frameworks</li>
+                <li>Executive enablement</li>
+              </ul>
+              <a href="404.html" class="link-arrow">Explore strategy &rarr;</a>
+            </article>
+            <article class="service-card reveal">
+              <h3>Model Engineering</h3>
+              <p>
+                Custom and foundation-model based solutions tuned to your data
+                and compliance boundaries.
+              </p>
+              <ul>
+                <li>Fine‑tuning & distillation</li>
+                <li>Evaluation & red‑teaming</li>
+                <li>MLOps integration</li>
+              </ul>
+              <a href="404.html" class="link-arrow">Explore engineering &rarr;</a>
+            </article>
+            <article class="service-card reveal">
+              <h3>AI Service Layer</h3>
+              <p>
+                A unified API surface that abstracts models, data and
+                orchestration into one managed plane.
+              </p>
+              <ul>
+                <li>Policy‑driven routing</li>
+                <li>Observability & tracing</li>
+                <li>Multi‑cloud ready</li>
+              </ul>
+              <a href="404.html" class="link-arrow">Explore platform &rarr;</a>
+            </article>
+            <article class="service-card reveal">
+              <h3>Responsible AI</h3>
+              <p>
+                Guardrails, governance and monitoring built directly into
+                every service we ship.
+              </p>
+              <ul>
+                <li>Bias & drift detection</li>
+                <li>Governance workflows</li>
+                <li>Human‑in‑the‑loop review</li>
+              </ul>
+              <a href="404.html" class="link-arrow">Explore RAI &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. How It Works Timeline Section -->
+      <section class="section section-muted how-it-works" id="how-it-works">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">HOW IT WORKS</p>
+            <h2 class="section-title">From first workshop to first inference.</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-line"></div>
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>1. Discovery Workshop</h3>
+                <p>
+                  Identify the right AI leverage points across your workflows,
+                  data and teams.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2. Rapid Prototyping</h3>
+                <p>
+                  Stand up sandbox environments and evaluate multiple model
+                  candidates in parallel.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>3. Service Hardening</h3>
+                <p>
+                  Add guardrails, monitoring and escalation paths around your
+                  chosen solution.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>4. Production & Scale</h3>
+                <p>
+                  Deploy globally with SLAs, ongoing tuning and transparent
+                  reporting.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Use Cases Section -->
+      <section class="section use-cases" id="use-cases">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">USE CASES</p>
+            <h2 class="section-title">AI services that stay in production.</h2>
+          </div>
+          <div class="cards-grid">
+            <article class="use-case-card reveal">
+              <h3>AI Assistants for Operations</h3>
+              <p>
+                Orchestrate internal knowledge, tickets and tools behind a
+                single conversational interface.
+              </p>
+              <p class="badge">Typical ROI: 27% faster resolution</p>
+            </article>
+            <article class="use-case-card reveal">
+              <h3>Document Intelligence</h3>
+              <p>
+                Parse, classify and reason over contracts, claims and
+                unstructured records at scale.
+              </p>
+              <p class="badge">Typical ROI: 65% less manual review</p>
+            </article>
+            <article class="use-case-card reveal">
+              <h3>Predictive Pipelines</h3>
+              <p>
+                Build forecasting and anomaly detection services that plug
+                directly into your stacks.
+              </p>
+              <p class="badge">Typical ROI: 18% cost reduction</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Metrics / Dashboard Section -->
+      <section class="section section-muted metrics" id="metrics">
+        <div class="container metrics-grid">
+          <div class="metrics-copy reveal">
+            <p class="eyebrow">OBSERVABILITY FIRST</p>
+            <h2 class="section-title">Every decision comes with a trace.</h2>
+            <p>
+              Our live observability surface shows model performance, user
+              behavior and drift signals in real time, so AI never feels like
+              a black box.
+            </p>
+          </div>
+          <div class="metrics-panel reveal">
+            <div class="metrics-row">
+              <div class="metric-chip">
+                <span class="metric-label">Service Health</span>
+                <span class="metric-value good">99.98%</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-label">Latency p95</span>
+                <span class="metric-value neutral">46 ms</span>
+              </div>
+            </div>
+            <div class="metrics-chart">
+              <div class="chart-bar bar-1"></div>
+              <div class="chart-bar bar-2"></div>
+              <div class="chart-bar bar-3"></div>
+              <div class="chart-bar bar-4"></div>
+              <div class="chart-bar bar-5"></div>
+            </div>
+            <div class="metrics-foot">
+              <span class="badge">Live drift alerts</span>
+              <span class="badge">Per‑request explanation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Testimonials Section -->
+      <section class="section testimonials" id="stories">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">CUSTOMER STORIES</p>
+            <h2 class="section-title">Teams that already ship with Stackly.</h2>
+          </div>
+          <div class="cards-grid">
+            <article class="testimonial-card reveal">
+              <p class="quote">
+                “We went from prototype to a fully governed AI service in
+                under a month. Our ops team finally trusts the predictions.”
+              </p>
+              <p class="author">VP of Data, Global Logistics Company</p>
+            </article>
+            <article class="testimonial-card reveal">
+              <p class="quote">
+                “Stackly gave us one interface to manage multiple
+                providers, models and regions without adding overhead.”
+              </p>
+              <p class="author">Head of Platform, Fintech Unicorn</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. CTA Section -->
+      <section class="section section-cta" id="contact">
+        <div class="container cta-inner reveal">
+          <div>
+            <p class="eyebrow">START WITH A PILOT</p>
+            <h2 class="section-title">
+              Bring one use case. We’ll bring a working service.
+            </h2>
+            <p>
+              Share a workflow, dataset or problem statement. Our team will
+              respond with a tailored pilot plan within 48 hours.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="404.html" class="btn btn-primary">Submit a brief</a>
+            <a href="404.html" class="btn btn-ghost">Download overview</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="assets/logoimg.webp">
+            <div class="brand-text">
+              <span class="brand-title">Stackly</span>
+              <span class="brand-subtitle">Artificial Intelligence Studio</span>
+            </div>
+          </div>
+          <p class="footer-about">
+            Stackly designs, deploys and operates artificial intelligence
+            services for teams that need reliability, not experiments.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="index.html">Home-1</a></li>
+            <li><a href="home2.html">Home-2</a></li>
+            <li><a href="404.html">Solutions</a></li>
+            <li><a href="404.html">Pricing</a></li>
+            <li><a href="404.html">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="contact-list">
+            <li>contact@stackly.ai</li>
+            <li>+91 12345 67890</li>
+            <!-- EDIT: Make location clickable to toggle map -->
+            <li>
+              <a href="#" id="location-link">Evolve Workstudio, Begur, Karnataka</a>
+            </li>
+          </ul>
+          <!-- INSERT: Small map (hidden by default) -->
+          <div id="location-map" class="location-map" hidden>
+            <iframe
+              title="Evolve Workstudio Map"
+              src="https://www.google.com/maps?q=Evolve+Workstudio+Begur+Karnataka&output=embed"
+              width="100%"
+              height="220"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Follow us</h4>
+          <div class="social-row">
+            <!-- EDIT: Replace text with inline SVG logos -->
+            <a href="404.html" class="social-icon" aria-label="Visit LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22.225 0H1.771C.792 0 0 .774 0 1.728v20.543C0 23.223.792 24 1.771 24h20.452C23.207 24 24 23.223 24 22.271V1.728C24 .774 23.207 0 22.225 0zM7.114 9H3.56v11.452h3.554V9zm-1.777-1.567a1.973 1.973 0 11-.003-3.946 1.973 1.973 0 01.003 3.946zM20.447 20.452h-3.557v-5.569c0-1.328-.025-3.036-1.852-3.036-1.853 0-2.136 1.445-2.136 2.94v5.665H9.345V9h3.402v1.561h.049c.474-.9 1.635-1.852 3.367-1.852 3.602 0 4.27 2.372 4.27 5.457v6.286z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="Visit Twitter">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.608 1.794-1.57 2.163-2.723-.949.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.72 0-4.928 2.206-4.928 4.928 0 .386.045.763.127 1.124-4.094-.205-7.719-2.165-10.148-5.144-.424.726-.667 1.57-.667 2.476 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.247-2.23-.616v.062c0 2.386 1.697 4.374 3.946 4.828-.413.111-.848.171-1.296.171-.315 0-.624-.03-.927-.086.631 1.953 2.463 3.376 4.633 3.415-1.698 1.33-3.832 2.123-6.156 2.123-.399 0-.79-.023-1.177-.069 2.193 1.407 4.797 2.228 7.6 2.228 9.119 0 14.102-7.546 14.102-14.09 0-.215-.005-.43-.014-.644.968-.698 1.8-1.57 2.463-2.565z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="Visit Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11 1.5a1 1 0 100 2 1 1 0 000-2zM12 8a4 4 0 110 8 4 4 0 010-8z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="Visit YouTube">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.5 6.2c-.3-1.2-1.2-2.1-2.4-2.4C19 3.3 12 3.3 12 3.3s-7 0-9.1.5C1.7 4.1.8 5 0.5 6.2 0 8.3 0 12 0 12s0 3.7.5 5.8c.3 1.2 1.2 2.1 2.4 2.4 2.1.5 9.1.5 9.1.5s7 0 9.1-.5c1.2-.3 2.1-1.2 2.4-2.4.5-2.1.5-5.8.5-5.8s0-3.7-.5-5.8zM9.6 15.5V8.5l6.4 3.5-6.4 3.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <span>© <span id="year"></span> Stackly AI. All rights reserved.</span>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy</a>
+            <a href="404.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
