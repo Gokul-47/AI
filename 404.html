@@ -7,6 +7,59 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="page-404">
+    <!-- INSERT: Page Loader Overlay -->
+    <div id="page-loader" class="page-loader" aria-live="polite" aria-busy="true" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-orb">
+          <span class="loader-core"></span>
+        </div>
+        <p class="loader-text">Loading...</p>
+      </div>
+    </div>
+    <!-- END INSERT -->
+
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="index.html" class="brand">
+          <img src="assets/logoimg.webp">
+          <div class="brand-text">
+            <span class="brand-title">Stackly</span>
+            <span class="brand-subtitle">Artificial Intelligence Studio</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item nav-dropdown">
+              <button class="nav-link nav-dropdown-toggle">
+                Home
+                <span class="chevron"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="home2.html" class="dropdown-link">Home-2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Industries</a>
+            </li>
+            <li class="nav-item">
+              <a href="404.html" class="nav-link">Resources</a>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="404.html" class="btn btn-ghost">Sign In</a>
+            <a href="404.html" class="btn btn-primary">Request Demo</a>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
     <main class="section section-404">
       <div class="container not-found-inner">
         <div class="orbital-system small">
@@ -30,26 +83,14 @@
           </p>
           <div class="cta-actions">
             <a href="index.html" class="btn btn-primary">Back to Home</a>
-           
           </div>
         </div>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
-<body>
-  <!-- INSERT: Page Loader Overlay -->
-  <div id="page-loader" class="page-loader active" aria-live="polite" aria-busy="true" aria-hidden="false">
-    <div class="loader-content">
-      <div class="loader-orb">
-        <span class="loader-core"></span>
-      </div>
-      <p class="loader-text">Loading...</p>
-    </div>
-  </div>
-  <!-- END INSERT -->
-</body>
 
 
 

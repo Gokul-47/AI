@@ -14,18 +14,12 @@ const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
 
 if (dropdown && dropdownToggle) {
   dropdownToggle.addEventListener("click", (e) => {
-    // On mobile the dropdown is always open; only toggle for larger screens
-    if (window.matchMedia("(min-width: 769px)").matches) {
-      e.stopPropagation();
-      dropdown.classList.toggle("open");
-    }
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
   });
 
   document.addEventListener("click", (e) => {
-    if (
-      window.matchMedia("(min-width: 769px)").matches &&
-      !dropdown.contains(e.target)
-    ) {
+    if (!dropdown.contains(e.target)) {
       dropdown.classList.remove("open");
     }
   });

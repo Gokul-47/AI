@@ -350,17 +350,25 @@ img {
 }
 
 .nav-dropdown .chevron {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: 1px solid var(--muted-2);
-  border-bottom: 1px solid var(--muted-2);
-  transform: rotate(45deg) translateY(-1px);
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1;
+  color: var(--muted-2);
+  width: auto;
+  height: auto;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.nav-dropdown .chevron::before {
+  content: "▾";
+  display: inline-block;
   transform-origin: center;
   transition: transform 0.18s ease;
-} 
+}
 
-.nav-dropdown.open .chevron {
-  transform: rotate(-135deg) translateY(1px);
+.nav-dropdown.open .chevron::before {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu {
@@ -389,6 +397,56 @@ img {
   transform: translateY(0);
 }
 
+/* Responsive: on small screens the nav becomes stacked and dropdown should flow inline */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    min-width: auto;
+    border-radius: 10px;
+    padding-left: 0.6rem;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+    display: none; /* hidden until nav is opened */
+  }
+
+  /* When mobile nav is opened, reveal submenu items only if the dropdown itself is opened */
+  .nav .nav-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-link {
+    padding-left: 1rem;
+  }
+}
+
 .dropdown-link {
   display: block;
   padding: 0.48rem 0.75rem;
@@ -400,6 +458,27 @@ img {
 .dropdown-link:hover {
   background: var(--surface);
 } 
+
+/* 404 page: force header to top and avoid content shift */
+.page-404 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 60;
+  background: rgba(var(--surface-rgb), 0.96);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.page-404 main {
+  padding-top: 4.6rem; /* reserve space for fixed header */
+}
+
+/* small tweak: ensure loader overlay sits above fixed header */
+.page-404 #page-loader {
+  z-index: 9999;
+}
 
 /* ==========
    Hero (new layout: offset cards + reversed on desktop)
@@ -1187,6 +1266,11 @@ img {
       transform 0.18s ease,
       visibility 0.18s ease;
     z-index: 55; /* keep the menu above page content */
+
+    /* ensure the hamburger menu fits the viewport */
+    max-height: calc(100vh - 6.4rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav.open .nav-list {
@@ -1248,6 +1332,7 @@ img {
     box-shadow: none;
     padding-left: 0; /* remove extra indentation */
     margin-left: 0;
+    display: none; /* keep submenu hidden until Home is explicitly opened */
   }
 
   .dropdown-link {
@@ -1257,8 +1342,17 @@ img {
     padding-left: 1.2rem; /* slight indent for subitems */
   }
 
+  /* show a right-aligned chevron in the collapsed (hamburger) menu */
   .nav-dropdown .chevron {
-    display: none;
+    display: inline-block;
+    float: right;
+    margin-left: 0.5rem;
+    color: var(--muted-2);
+  }
+
+  /* reveal submenu only when the dropdown itself is opened */
+  .nav .nav-dropdown.open .dropdown-menu {
+    display: block;
   }
 
   .cta-inner {
@@ -1333,7 +1427,29 @@ img {
   .nav-container {
     padding-inline: 0.9rem;
   }
-}
+
+  /* Small screen fixes: prevent hamburger menu from causing horizontal overflow */
+  @media (max-width: 360px) {
+    html, body {
+      overflow-x: hidden; /* avoid horizontal scroll on narrow devices */
+    }
+
+    .nav-list {
+      left: 0.5rem; /* reduce horizontal inset */
+      right: 0.5rem;
+      max-width: calc(100% - 1rem);
+      box-sizing: border-box;
+      min-width: 0; /* allow flex children to shrink */
+    }
+
+    .nav-list .nav-link,
+    .nav-list .dropdown-link {
+      word-break: break-word;
+      white-space: normal;
+    }
+  }
+  }
+
 
 
 
